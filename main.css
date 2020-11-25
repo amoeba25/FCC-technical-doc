@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap'); /*main body font */
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@300&display=swap'); /*title font */
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu Mono', monospace;
+    background-color:  #24221f;
+    overflow-x: hidden;
+
+}
+.title{
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    z-index: 1;
+}
+.logo{
+    display: flex;
+    justify-content: center
+}
+.logo h1{
+    display: flex;
+    justify-content: center;
+}
+.logo img{
+    padding: 5px;
+    height: 2.5em;
+    margin-top: 0.8em;
+    margin-left: 5px;
+}
+
+.page-wrapper{
+    margin-top: 50px;
+    height: 100%;
+    background-color: #24221f;
+    color: white;
+}
+
+#navbar{
+    position: fixed;
+    min-width: 290px;
+    top: 80px;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    z-index: 1;
+    padding-top: 20px;
+    border-color: white;
+    border-right: solid white 1px;
+}
+#navbar ul{
+    font-size: 1.3em;
+    height: 88%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#navbar header a{
+    text-align: center;
+    font-size: 1.7em;
+    padding: 10px;
+    font-family: 'Goldman', cursive;
+}
+#navbar header a:hover{
+    transform: none;
+}
+
+#navbar li{
+    list-style: none;
+    position: relative;
+    width: 100%;
+}
+#navbar a{
+    color: white;
+    display: block;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-align: justify;
+    cursor: pointer;
+    transition: all .1s ease-in-out
+}
+#navbar a:hover{
+    transform: scale(1.1);
+}
+
+#main-doc{
+    position: absolute;
+    text-align: left;
+    padding-left: 20px;
+    box-sizing: border-box;
+    width: 80%;
+    margin-left: 310px;
+    padding-top: 40px;
+}
+@media(max-width: 800px){
+    #main-doc{
+        margin-left: 0px ;
+    }
+}
+#main-doc #text{
+    max-width: 90%;
+
+}
+.main-section{
+    margin: 80px 0px;
+}
+.main-section header{
+    margin-top: 10px;
+    font-size: 1.7em;
+    font-weight: normal;
+    color: grey;
+}
+.main-section p,ul{
+    line-height: 1.2;
+    font-size: 1.1em;
+    list-style: none;
+}
+.main-section a{
+    color: white;
+}
+.extra-text{
+    color: rgb(182, 59, 80);
+}
+.main-section .main-images{
+    margin-top: 20px;
+    max-width: 90%;
+}
+code{
+    display: block;
+    text-align: left;
+    white-space: pre;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: #f1f0f0;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    color: #24221f;
+    width: 80%;
+  }
+
+
+
+
