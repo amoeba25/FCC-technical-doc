@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title"> 
+        <div class="logo"> 
+        <h1> A beginner's guide to Github </h1>
+        <img src="https://amoeba25.github.io/FCC-technical-doc/images/GitHub-Mark-32px.png"> </img> 
+        </div>
+    </div>
+    <div class="page-wrapper"> 
+        <div id="navigation"> 
+        <nav id="navbar">
+            <header> <a href="#main-doc"> Github Documentation </a> </header>
+            <ul>
+                <li> <a class="nav-link" href="#Introduction"> Introduction </a> </li>
+                <li> <a class="nav-link" href="#Setting_things_up"> Setting things up </a> </li>
+                <li> <a class="nav-link" href="#Commits"> Commits </a> </li>
+                <li> <a class="nav-link" href="#Branches"> Branches </a> </li>
+                <li> <a class="nav-link" href="#Merge"> Merge </a> </li>
+                <li> <a class="nav-link" href="#Forking"> Forking </a> </li>
+                <li> <a class="nav-link" href="#Issues"> Issues </a> </li>
+                <li> <a class="nav-link" href="#Git_startup"> Git startup </a> </li>
+                <li> <a class="nav-link" href="#Clone_method"> Clone method </a> </li>
+                <li> <a class="nav-link" href="#Init_method"> Init method </a> </li>
+                <li> <a class="nav-link" href="#Github_pages"> Github pages </a> </li>
+            </ul>
+        </nav>
+        </div>
+    <main id="main-doc"> 
+        <div id="text">  
+            <br>
+            <br>
+            <br>
+        <section class="main-section" id="Introduction">
+            <header> Introduction </header>
+            <p> Say you go on a nice vacation and take a lot of pictures on your phone. You now want to access these images on 
+                your computer to edit them and your father also wants to see them. One way is to move each image using your USB 
+                transfer to your computer and your dad's phone and keep doing that for every device you want to use but a more 
+                sensible approach would be to upload them onto google drive where everyone can view those pictures just by the click
+                of a link and add pictures from their own phone. </p>
+            <p>The same thing could be applied to code but in this case your google drive is Github where you can upload your code
+                and other memebers from your team could either change, download or add their own code to the project. Git is just 
+                the software which helps you complete the procedure and keep track of everything.  </p>
+            </section>
+        <section class="main-section" id="Setting_things_up">
+            <header> Setting things up </header>
+            <p> First task is to headover to the Github website and make an account. Next step is install git from <a href="https://git-scm.com/downloads">here</a>. 
+                We will first start by working on the Github site. The first thing to do is to create a repository from the main page. 
+                <ul>
+                    <li> What is a repository?</li>
+                    <li> A repository is esentially a folder in Github in which
+                    your project lives. We cam intialise it with a Readme which
+                    esentially gives a breif description about your project
+                    </li>
+                    <li> This is what it initially looks like </li>
+                    <li><img src="https://amoeba25.github.io/FCC-technical-doc/images/repo-setup.PNG" class="main-images"> </li>
+                </ul>
+            <p>Now once we have made a repo we can start adding our files to it. </p>
+            </p>
+            <p class="extra-text">Protip - if you're a student you can sign up for Github github student developer pack using your 
+                college email id. You'll get access to Github Pro for free along with discounted access to different 
+                tools. 
+            </p>
+
+        </section>
+        <section class="main-section" id="Commits">
+            <header> Commits </header>
+            <p> Now to add files we click on 'add files' button and add the file. After editing the file, we can go ahead
+                and 'commit' the file to the repository. </p>
+            <ul>
+                <li> What does commiting a file mean? </li>
+                <li> <img src="https://amoeba25.github.io/FCC-technical-doc/images/commit.PNG" class="main-images"> </li>
+                <li> Commiting a file in simple terms means saving (although saving and commiting could mean different things
+                    as we will later see) any changes we make. These changes could be adding or removing files and also editing the pre-exisiting 
+                    files. </li>
+            </ul>
+            <p>If we are collaborating on a project then it's a good practice to describe our commits well before making them for 
+                the other people working on the repo. </p>
+            <img src="https://amoeba25.github.io/FCC-technical-doc/images/commit-hist.PNG" class="main-images"> 
+            <p> Each commit has an associated hash code as we can see from the picture. We will talk about it's significane 
+                in the next section. </p>
+        </section>
+        <section class="main-section" id="Branches">
+            <header> Branches </header>
+            <p> A main advantage of using Github is source control. This means we can create different isntances of the same
+                project, make changes to the project and still revert back to the orginal project if we aren't happy with the changes. 
+                This is what makes Github a powerful tool for collaboration. We do this by usng branches. </p>
+                <ul>
+                    <li> What is branching? </li>
+                    <li> Branching is creating another instance of the same repo. We have been working only on the main branch until now
+                        Whenever we hit commit, by default we commit the changes to the main branch. 
+                    </li>
+                </ul> 
+            <img src="https://amoeba25.github.io/FCC-technical-doc/images/create-branch.PNG" class="main-images"> 
+            <p> We go create a new branch user and after selecting that branch we make changes to our files </p>
+            <p> On making the changes we 'commit' the changes to our user branch </p>
+            <img src="https://amoeba25.github.io/FCC-technical-doc/images/branch-commit.PNG" class="main-images">
+            <p> This entails that the changes that we made are only limited to the user branch. If we switch to 
+                our main branch we notice the changes aren't reflected in it. If the person you are collaborating with
+                creates a seprate branch and changes the contents but not to your liking then you could just reject those 
+                changes and your original code remains unaffected.</p>
+        </section> 
+        <section class="main-section" id="Merge">
+            <header> Merge </header>
+            <p> Now we have made some changes to the user branch and we like them enough and want to include them in our main branch.
+                We do that by sending a pull request and merging both the branches </p>
+            <ul> 
+                <li> What is a pull request? </li>
+                <li> A pull request is esentially requesting the owner of the repo to look into the changes we have 
+                    made on our user branch and accept those. It's called a 'pull' request as the user will pull the changes 
+                    from our branch.
+                </li> 
+            </ul>
+            <img src="https://amoeba25.github.io/FCC-technical-doc/images/cmp-pull.PNG" class="main-images">
+            <p> We click the compare and pull here. We also notice how Github notifies us that the user branch 
+                is one commit ahead of the main branch. 
+            </p>
+            <img src="https://amoeba25.github.io/FCC-technical-doc/images/pull-req.PNG" class="main-images">
+            <p> We can leave any comments associated with the pull requests and then hit create a pull request. 
+                Github then compares both our branches and checks to see if there are any conflicts to them(we changed 
+                the same line on the same doc using 2 different branches). If there are no conflicts we could 
+                merge both the branches together. </p>
+            <ul>
+                <li> What is merging? </li>
+                <li> Once we have made all the changes in our current working branch, we would want to 
+                    make the same changes to our main branch. We can esentially 'merge' both the branches so 
+                    that the changes in user branch are reflected in the main branch and we can continue working 
+                    on the changed project.
+                </li>
+            </ul>
+            <img src="https://amoeba25.github.io/FCC-technical-doc/images/merge.PNG" class="main-images"> 
+            <p> We click the merge pull request here and we have merged the branches. If we check out the main branch
+                now we can see that the changes are reflected
+            </p> 
+            <p> If we want to look at a tree diagram we could go to 'Insights>Network' and notice how the user branch 
+                was created,changed and then merged back to the main branch</p>
+            <img src="https://amoeba25.github.io/FCC-technical-doc/images/network.PNG">  
+
+        </section> 
+        <section class="main-section" id="Forking">
+            <header> Forking </header>
+            <p> Say we have a public repo- bootstrap project. Now me as a github user wants to make changes to the repo but I might
+                mess something up if I was to work on the orginal project. What I could do is 'fork' the repo. It means creating
+                another instance of sort of the repo which would sit on my account and I could make changes to it. We will have 
+                an exact replica of the entire github repo along with it's whole history. Once the changes have been made, I could 
+                send a pull request to the owner of the repo and request the changes. If my request gets approved, the changes will now 
+                be a part of the bootstrap project. This makes Github a great tool to partcipate in open-source communities and have
+                user added features. </p>
+
+        </section>
+        <section class="main-section" id="Issues">
+            <header> Issues </header>
+            <p> If we are working on a public project, chances are we might run into some bug that the developer had not thought
+                of. We can notify the owner of the project by filling an issue </p>
+            <ul> 
+                <li> What are issues? </li>
+                <li> Issues are in simple terms a complain forum where we can comment about 
+                    any bugs that we have faced using the product. An issue remains open unti it is deemed to be fixed by either
+                    devloper or the person who complained about it.</li>
+            </ul>
+            <img src="https://amoeba25.github.io/FCC-technical-doc/images/issue-submit.PNG" class="main-images">
+            <p> We can refer to a commit using it's hashcode and file an issue if we aren't happy
+                with the commit. We can even use markdown and add any screenshots or code snippets we 
+                might want to use
+            </p>
+            <img src="https://amoeba25.github.io/FCC-technical-doc/images/issue-res.PNG"> 
+            <p> The owner can then put any comments once the issue is solved and close the issue. </p>
+
+        </section>
+        <section class="main-section" id="Git_startup">
+            <header> Git startup </header>
+            <p> We learned how to use Github to upload our code to the servers and access it using the Github website but what if 
+                we wanted to download a repo from a project and work on it locally on our computer? Or we have a folder on your laptop that 
+                we want to upload to our Github account as a repository. This is where using Git from our command line comes in. </p>
+            <p> To start off we could do use help command to get a list of different commands we can use with git </p>
+            <code> D:\Soham\temp>git help</code>
+            <p> We then need to configure our system to be connected with our github profile and email.</p>
+            <code>  D:\Soham\temp>git config --global user.name "amoeba25" 
+  D:\Soham\temp>git config --global user.email "amoeba@gmail.com" </code>
+            <p> Once we have configured our system, we are ready to use Git. Now change the working
+                directory to the one we want to work on. We can now use either of the two methods to 
+                start using Git:
+            </p>
+            <ul>
+                <li>1. The clone method</li>
+                <li>2. The init method</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Clone_method">
+            <header> Clone method </header>
+            <p> In this method we make our repository on the Github website like we did above,download it
+                and then work on it locally.To start off, we need to clone the repository </p>
+                <ul>
+                    <li>What is cloning? </li>
+                    <li>Cloning in simple terms is just downloading the repository from the Github website. 
+                        It could be any repo we want to use locally on our computer. </li>
+                </ul>
+            <img src="https://amoeba25.github.io/FCC-technical-doc/images/clone-url.PNG" class="main-images"> 
+            <p> We copy this url and paste it in our working directory as such </p>
+            <code> D:\Soham\temp>git clone https://github.com/amoeba25/FCC-git-project.git </code>
+            <p> Once the repo has been download we can start adding files to folder or make changes
+                to the existing files. Here we make some changes to our about.html file and save it. 
+                This is why I mentioned save and commit aren't the same thing. On our machine the file 
+                has been saved but we need to commit this file to main branch. We modify and save 'about.html' 
+                We then use the status command to get the status of the directory </p>
+            <code> D:\Soham\temp\FCC-git-project>git status
+ On branch main
+ Your branch is up to date with 'origin/main'.
+                
+ Changes not staged for commit:
+ (use "git add <file>..." to update what will be committed)
+ (use "git restore <file>..." to discard changes in working directory)
+  modified:   about.html
+                
+ no changes added to commit (use "git add" and/or "git commit -a") </code> 
+            <p> It's noticeable here how the file has been changed and saved bu we haven't commited it yet. To commit this we will
+            have to add it to staging are </p>
+                <ul>
+                    <li>What is a staging area? </li>
+                    <li>If we have 10 files in our repo and we make changes to all of them. We want to only
+                commit 5 of these files. To achieve this we have a 'staging area'. We only add files 
+                we want to commit to this staging area. After adding the files we can commit the changes.
+                    </li>
+                </ul>
+            <p> Adding the 'about.html', we can get it's status and notice it's added to the 
+                staging area
+            </p>
+            <code>D:\Soham\temp\FCC-git-project>git add about.html
+
+D:\Soham\temp\FCC-git-project>git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+(use "git restore --staged <file>..." to unstage)
+modified:   about.html </code>
+            <p> Once these have been staged, we can finally commit these files with 
+                a message 
+            </p>
+            <code>D:\Soham\temp\FCC-git-project>git commit -m"modified about.html locally"</code>
+            <p>Now these changes have been commited to the main branch. The last thing to do is push them to 
+               our github repo online. Remember we cloned the repo to our local device. The commits have been
+                made on our local device instance but the changes we make on our local device need to be pushed 
+                to our orginal online repo. 
+            </p>
+            <p> Before pushing we need to understand that we have a remote repository in Git</p>
+            <ul>
+                <li>What is a remote? </li>
+                <li> A remote is a common repo that all team members can use to exchange their changes.Such a remote
+                    is stored on a hosting website which is Github in our case. This is in contrast to the local instance
+                    of the repo that is on our device </li>
+            </ul>
+            <p> If we input command 'remote' we can get the repos associated with our file </p>
+            <code> D:\Soham\temp\FCC-git-project>git remote
+ origin</code> 
+            <p> This 'origin' points to our repo. We need to reference it to push our changes to our main branch. We do this by </p>
+            <code>D:\Soham\temp\FCC-git-project>git push origin main</code>
+            <p> Now finally if we head over to Github and check our repo online, we can notice that the changes have been made.</p>
+        </section>
+
+
+        <section class="main-section" id="Init_method">
+            <header> Init method </header>
+            <p> If instead of making the repo on Github and cloning it, we want to make one our local computer
+                we can use the init method. Make a director type </p>
+            <code>D:\Soham\temp\init-project>git init
+Initialized empty Git repository in D:/Soham/temp/init-project/.git/</code>
+            <p> The porblem with this is we wont have a remote attached to this repo. So if we input 
+                remote command then it's not going to show anything. We need to add that remote ourselves. 
+            </p>
+            <p>First step to do that would be to add make an empty repository using Github. Intialising it without a Readme
+                will give us this. We copy the url. 
+            </p>
+            <img src="https://amoeba25.github.io/FCC-technical-doc/images/remote.PNG" class="main-images">
+            <p> After getting the url of the Repo we can just add a remote to it</p>
+            <code> D:\Soham\temp\init-project>git remote add origin https://github.com/amoeba25/init-project.git </code>
+            <p> Now on inputing 'git remote', it returns origin and so it's linked to our github repo. We can now edit,add or delete 
+                files and follow the same steps of add,commit and push like we did for the clone method.</p>
+        </section>
+        <section class="main-section" id="Github_pages">
+            <header>Github pages </header>
+            
+            <p> A relatively unkown feature on Github is it allows you to host your websites, free of cost. These are known as 
+                Github pages and its easy to set one up </p>
+            <p> The first step to do is to make a new branch called 'gh-pages'. This helps Github identify we are going to be 
+                using Github pages. 
+            </p>
+            <p> Next step is to go to 'Settings>Branches' and change the default branch from main to gh-pages</p>
+            <img src="https://amoeba25.github.io/FCC-technical-doc/images/gh-branch.PNG" class="main-images"> 
+            <p> And we're done! We can then go to 'Settings>options' and scroll down to find the link where our 
+                repo is hosted. 
+            </p>
+            <img src="https://amoeba25.github.io/FCC-technical-doc/images/final.PNG" class="main-images"> 
+            <p>We can then use this url to access different pages of our repo. We could also delete the main branch completly
+                so as to not accidemtally use it.
+            </p>
+            <p>Thus we can see how powerful Github is for collaboarting easily with people and acting as a source control system. 
+            </p>
+            
+
+        </section>
+    </div>
+    </main>
+    </div>
+</body>
+</html>
