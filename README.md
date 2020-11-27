@@ -1,2 +1,5 @@
 # FCC-technical-doc
-This repository is about the 4th project done by me with regards to technical documentation of Github
+
+The 4th project in the Responsive Web Design project based on a simple guide to Github documentation 
+
+Working link- https://amoeba25.github.io/FCC-technical-doc/
